@@ -1,0 +1,19 @@
+{
+  "name": "vuit",
+  "version": "1.0.0",
+  "description": "vue+vux+zys8119 基础模板",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zys8119/vuit.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zys8119/vuit/issues"
+  },
+  "homepage": "https://github.com/zys8119/vuit#readme"
+}
