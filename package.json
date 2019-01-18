@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "description": "vue+vux+zys8119 基础模板",
   "main": "index.js",
+  "bin": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -15,5 +16,10 @@
   "bugs": {
     "url": "https://github.com/zys8119/vuit/issues"
   },
-  "homepage": "https://github.com/zys8119/vuit#readme"
+  "homepage": "https://github.com/zys8119/vuit#readme",
+  "dependencies": {
+    "ncol": "^0.0.7",
+    "ncommand": "^0.0.7",
+    "shelljs": "^0.8.3"
+  }
 }
