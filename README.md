@@ -1,10 +1,15 @@
 # vuit
 vue+vux+zys8119 基础模板
 
-### 脚手架
+### 安装脚手架
 
 ```bash
     npm install vuit -g    
+```
+### 拉取模板
+
+```bash
+    vuit init <projectName>
 ```
 
 ### 项目启动
