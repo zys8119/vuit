@@ -2,7 +2,7 @@
     <div class="Layout">
         <layout-header v-if="airforce.layout.headerShow"></layout-header>
         <transition :name="airforce.layout.transitionName">
-            <router-view class="Layout-view" />
+            <router-view class="Layout-view" :class="{LayoutViewOffHeaderShow:!airforce.layout.headerShow}" />
         </transition>
         <layout-footer v-if="airforce.layout.footerShow"></layout-footer>
     </div>
@@ -22,7 +22,7 @@
     @import "../../assets/less/fn";
     .Layout {
         .Layout-view{
-            position: fixed;
+            /*position: fixed;*/
             left: 0;
             top: @HeaderHeight;
             z-index: 1;
@@ -36,6 +36,9 @@
             .calcHeigth(936,@HeaderHeight+@FooterHeight);
             .calcHeigth(1024,@HeaderHeight+@FooterHeight);
             height: ~"calc( 100% - @{HeaderHeight} - @{FooterHeight})" !important;
+            &.LayoutViewOffHeaderShow{
+                height: auto !important;
+            }
         }
     }
 </style>
