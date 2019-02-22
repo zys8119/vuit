@@ -15,8 +15,9 @@ class Vuit {
     }
 
     //拉取基础模板
-    init(_vm){
+    init(_vm,type){
         this.projectName = _vm.argv[1] || "vuit";
+        this.templateDirName = type || "template";
         if(this.projectName == "-h"){
             newCommand
                 .Commands({
@@ -38,7 +39,7 @@ class Vuit {
     //下载模板
     Downloading(){
         ncol.info("Downloading templates ...");
-        this.checkDirectory(path.resolve(__dirname, '../template'),path.resolve(process.cwd(), './'+this.projectName));
+        this.checkDirectory(path.resolve(__dirname, '../',this.templateDirName),path.resolve(process.cwd(), './'+this.projectName));
         ncol.green("Download done");
     }
 

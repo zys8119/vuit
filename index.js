@@ -11,7 +11,7 @@ newCommand.end(function (){
                 .info(" <command|options> ")
                 .log("is one of:");
         })
-        .log(`     init -i -v --version -h help`)
+        .log(`     init -i app -a  -v --version -h help`)
 })
     .Commands({
         log:["-i","...info('[-i]')","拉取基础模板"],
@@ -26,16 +26,29 @@ newCommand.end(function (){
            VuitInit.init(this);
         }
     })
+    .Commands({
+        log:["-a","...info('[-a]')","拉取app架构模板"],
+        output:false,
+        callback:function () {
+            VuitInit.init(this,"appTemplate");
+        }
+    })
+    .Commands({
+        log:["app","...info('[-a]')","拉取app架构模板"],
+        callback:function () {
+           VuitInit.init(this,"appTemplate");
+        }
+    })
     .Options({
         log:["-v","查看版本号"],
-        output:false,
+        // output:false,
         callback:function () {
             VuitInit.getVersion(this);
         }
     })
     .Options({
         log:["--version","查看版本号"],
-        output:false,
+        // output:false,
         callback:function () {
             VuitInit.getVersion();
         }
