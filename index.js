@@ -39,6 +39,19 @@ newCommand.end(function (){
            VuitInit.init(this,"appTemplate");
         }
     })
+    .Commands({
+        log:["admin","...info('[-admin]')","拉取admin架构模板"],
+        callback:function () {
+           VuitInit.init(this,"adminTemplate");
+        }
+    })
+    .Commands({
+        log:["-admin","...info('[-admin]')","拉取admin架构模板"],
+        output:false,
+        callback:function () {
+           VuitInit.init(this,"adminTemplate");
+        }
+    })
     .Options({
         log:["-v","查看版本号"],
         // output:false,

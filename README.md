@@ -1,7 +1,7 @@
 # vuit [![npm](https://img.shields.io/badge/npm-Install-zys8119.svg?colorB=cb3837&style=flat-square)](https://www.npmjs.com/package/vuit)  [![github](https://img.shields.io/badge/github-<Code>-zys8119.svg?colorB=000000&style=flat-square)](https://github.com/zys8119/vuit)
 vue+vux+zys8119 基础模板
 
->内含基础模板，app架构模板（包含转场动画）
+>内含基础模板，app架构模板（包含转场动画），admin架构模板
 
 ### 安装脚手架
 
@@ -18,6 +18,7 @@ vue+vux+zys8119 基础模板
     Commands
         init [-i] 拉取基础模板
         app [-a] 拉取app架构模板
+        admin [-admin] 拉取admin架构模板
     Options
         -v 查看版本号
         --version 查看版本号
