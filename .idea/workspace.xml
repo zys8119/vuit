@@ -1,104 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="16991700-cb8a-4983-9fa4-810917ba8208" name="Default" comment="更新依赖">
-      <change afterPath="$PROJECT_DIR$/adminTemplate/.eslintignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adminTemplate/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adminTemplate/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adminTemplate/babel.config.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adminTemplate/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adminTemplate/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adminTemplate/public/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adminTemplate/public/images/404/404.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adminTemplate/public/images/404/404_cloud.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adminTemplate/public/images/common/close_btn.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adminTemplate/public/images/common/expand_folder.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adminTemplate/public/images/common/folder.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adminTemplate/public/images/common/folder1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adminTemplate/public/images/common/folder2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adminTemplate/public/images/common/icon-amap-click-showAddress.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adminTemplate/public/images/common/icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adminTemplate/public/images/common/logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adminTemplate/public/images/common/menu-left-bg.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adminTemplate/public/images/common/right_arrow.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adminTemplate/public/images/common/to-left.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adminTemplate/public/images/common/to-right.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adminTemplate/public/images/common/top-banner.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adminTemplate/public/images/login/account_icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adminTemplate/public/images/login/bottom_icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adminTemplate/public/images/login/check_finish.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adminTemplate/public/images/login/content_bg.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adminTemplate/public/images/login/content_bg1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adminTemplate/public/images/login/content_bg2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adminTemplate/public/images/login/icon-scan-close.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adminTemplate/public/images/login/icon-scan-refresh.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adminTemplate/public/images/login/lock_icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adminTemplate/public/images/login/login_bg.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adminTemplate/public/images/login/online_float.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adminTemplate/public/images/login/phone_icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adminTemplate/public/images/login/qrcode_android.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adminTemplate/public/images/login/qrcode_ios.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adminTemplate/public/images/login/step_1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adminTemplate/public/images/login/step_2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adminTemplate/public/images/login/step_3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adminTemplate/public/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adminTemplate/src/App.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adminTemplate/src/alert-vue-plug/ZXDialogAlert.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adminTemplate/src/alert-vue-plug/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adminTemplate/src/alert-vue-plug/renderHtml.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adminTemplate/src/api/Interface.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adminTemplate/src/api/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adminTemplate/src/api/modules/auth.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adminTemplate/src/api/modules/dashboard_proposal.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adminTemplate/src/api/modules/dashboard_user.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adminTemplate/src/api/modules/statistics.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adminTemplate/src/api/modules/term.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adminTemplate/src/api/type.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adminTemplate/src/api/usePlugin.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adminTemplate/src/assets/js/echartsMaps.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adminTemplate/src/assets/js/entry.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adminTemplate/src/assets/js/request.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adminTemplate/src/assets/js/request.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adminTemplate/src/assets/style/css/iconfont.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adminTemplate/src/assets/style/css/iconfont.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adminTemplate/src/assets/style/css/normalize.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adminTemplate/src/assets/style/less/System/Login.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adminTemplate/src/assets/style/less/constant.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adminTemplate/src/assets/style/less/public.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adminTemplate/src/assets/style/main.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adminTemplate/src/components/Common/Echarts.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adminTemplate/src/components/Common/HomeCard.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adminTemplate/src/components/Common/Tree.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adminTemplate/src/components/Common/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adminTemplate/src/components/views/404/Index.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adminTemplate/src/components/views/Common/Index.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adminTemplate/src/components/views/Common/LeftNav.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adminTemplate/src/components/views/Common/TabsNav.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adminTemplate/src/components/views/Common/TopNav.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adminTemplate/src/components/views/Home/Home.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adminTemplate/src/components/views/Home/components/DutyActivityStatistics.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adminTemplate/src/components/views/Home/components/LoginStatistics.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adminTemplate/src/components/views/Home/components/MeetingStatistics.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adminTemplate/src/components/views/Home/components/RepresentativeStatistics.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adminTemplate/src/components/views/Home/components/SuggestedMotionStatistics.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adminTemplate/src/components/views/PeoplesCongressMeeting/RegisterManage.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adminTemplate/src/components/views/System/Login.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adminTemplate/src/filters/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adminTemplate/src/main.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adminTemplate/src/router/404/routers.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adminTemplate/src/router/Home/routers.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adminTemplate/src/router/PeoplesCongressMeeting/routers.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adminTemplate/src/router/System/routers.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adminTemplate/src/router/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adminTemplate/src/utils/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adminTemplate/src/vuex/modules/menu.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adminTemplate/src/vuex/store.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adminTemplate/typeScript配置.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adminTemplate/vue.config.js" afterDir="false" />
+    <list default="true" id="16991700-cb8a-4983-9fa4-810917ba8208" name="Default" comment="adminTemplate">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/aminTemplate.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -218,7 +123,7 @@
       <workItem from="1548043154748" duration="1259000" />
       <workItem from="1550813954798" duration="2379000" />
       <workItem from="1563870547055" duration="142000" />
-      <workItem from="1578627629450" duration="428000" />
+      <workItem from="1578627629450" duration="477000" />
     </task>
     <task id="LOCAL-00001" summary="修改表述文件">
       <created>1548031823754</created>
@@ -262,7 +167,14 @@
       <option name="project" value="LOCAL" />
       <updated>1563870679246</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="adminTemplate">
+      <created>1578628101506</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1578628101506</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -300,12 +212,13 @@
     <MESSAGE value="发布0.0.3版本" />
     <MESSAGE value="撤销升级webpack-dev-server" />
     <MESSAGE value="更新依赖" />
-    <option name="LAST_COMMIT_MESSAGE" value="更新依赖" />
+    <MESSAGE value="adminTemplate" />
+    <option name="LAST_COMMIT_MESSAGE" value="adminTemplate" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="1456" y="370" key="CommitChangelistDialog2" timestamp="1578628063970">
+    <state x="643" y="406" key="CommitChangelistDialog2" timestamp="1578628099135">
       <screen x="0" y="0" width="2560" height="1560" />
     </state>
-    <state x="1456" y="370" key="CommitChangelistDialog2/0.0.2560.1560@0.0.2560.1560" timestamp="1578628063970" />
+    <state x="643" y="406" key="CommitChangelistDialog2/0.0.2560.1560@0.0.2560.1560" timestamp="1578628099135" />
   </component>
 </project>
