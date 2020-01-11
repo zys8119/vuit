@@ -6,6 +6,10 @@ const Vuit = require("./bin/vuit");
 
 const newCommand:newCommandOptions = new command();
 const VuitInit = new Vuit();
+// const CommandsConfigs = {
+    // "-i":{log:["-i","...info('[-i]')","拉取基础模板"],output:false,type:null},
+// };
+
 newCommand.end(function (){
     this.console
         .color(function () {
@@ -57,14 +61,12 @@ newCommand.end(function (){
     })
     .Options({
         log:["-v","查看版本号"],
-        // output:false,
         callback:function () {
             VuitInit.getVersion(this);
         }
     })
     .Options({
         log:["--version","查看版本号"],
-        // output:false,
         callback:function () {
             VuitInit.getVersion();
         }
