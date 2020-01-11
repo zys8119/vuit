@@ -1,7 +1,5 @@
 #!/usr/bin/env node
-// import command from "ncommand"
-// import Vuit from "./bin/vuit"
-import {newCommandOptions} from "./typeSctipt/interface";
+import { newCommandOptions } from "./typeSctipt/interface";
 declare const require:any;
 const command = require("ncommand");
 const Vuit = require("./bin/vuit");
@@ -16,7 +14,7 @@ newCommand.end(function (){
                 .info(" <command|options> ")
                 .log("is one of:");
         })
-        .log(`     init -i app -a  -v --version -h help`)
+        .log(`    init -i app -a admin -admin -v --version -h help`)
 })
     .Commands({
         log:["-i","...info('[-i]')","拉取基础模板"],

@@ -1,10 +1,17 @@
+import {ncolOptions, newCommandOptions, VuitOptions} from "../typeSctipt/interface"
+declare const module:any;
+declare const require:any;
+declare const __dirname:any;
+declare const process:any;
 const packageJson = require("../package.json");
-const ncol = require("ncol");
+const ncol:ncolOptions = require("ncol");
 const command = require("ncommand");
-const newCommand = new command();
+const newCommand:newCommandOptions = new command();
 const fs = require("fs");
 const path = require("path");
-class Vuit {
+class Vuit implements VuitOptions{
+    projectName:string;
+    templateDirName:string;
     constructor(){
         this.projectName = null;
     }
@@ -37,7 +44,7 @@ class Vuit {
     }
 
     //下载模板
-    Downloading(){
+    Downloading(_vm:any){
         ncol.info("Downloading templates ...");
         this.checkDirectory(path.resolve(__dirname, '../',this.templateDirName),path.resolve(process.cwd(), './'+this.projectName));
         ncol.green("Download done");

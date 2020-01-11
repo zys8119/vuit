@@ -1,6 +1,6 @@
 {
   "name": "vuit",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "description": "vue+vux+zys8119 基础模板",
   "main": "index.js",
   "bin": "index.js",
