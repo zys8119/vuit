@@ -32,5 +32,12 @@ export default <v1_auth>{
             method: 'get',
             dom: '.scan-login-content'
         })
+    },
+    selfMenuAndRole(){
+        return window.common.Axios({
+            url: '/v1/auth/selfMenuAndRole/',
+            method: 'get',
+            loading:false,
+        })
     }
 }

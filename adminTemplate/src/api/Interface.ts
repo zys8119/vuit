@@ -5,8 +5,27 @@ import {
     statistics_getActivityInfo_data,
     statistics_getConferenceInfo_data,
     dashboard_user_rddb,
-    dashboard_proposal_jianyi, auth_login, auth_getCode, auth_resetPwd, auth_generateLoginCode
+    dashboard_proposal_jianyi,
+    auth_login,
+    auth_getCode,
+    auth_resetPwd,
+    auth_generateLoginCode
 } from "./type"
+// todo 应用配置选项
+export interface appConfigOptions {
+    // 菜单配置
+    MenuMap:appConfigOptions_MenuMap
+}
+export interface appConfigOptions_MenuMap {
+    switch:boolean; // 本地环境是否开启服务器菜单
+    dev:appConfigOptions_options_switch; // 开发菜单配置
+    buid:appConfigOptions_options_switch; // 生产菜单配置
+}
+export interface appConfigOptions_options_switch {
+    path:string;// 路由 url
+    children:string;// 子集 children
+    name:string;// 显示名称
+}
 
 // todo 弹窗
 export interface $ZAlert {
@@ -52,6 +71,12 @@ export interface $utilsOption {
      * @param dom
      */
     setHorizontalScroll(dom:string):void;
+    /**
+     * 获取菜单配置
+     * @param config
+     * @param mapData
+     */
+    getMenuMap(config:object,mapData:appConfigOptions_options_switch):object | appConfigOptions_options_switch;
 }
 
 // todo Common接口类
@@ -113,6 +138,8 @@ export interface v1_auth {
     resetPwd?(data:auth_resetPwd):AxiosPromise;
     //扫码登录
     generateLoginCode?(data:auth_generateLoginCode):AxiosPromise;
+    //获取菜单及权限
+    selfMenuAndRole?():AxiosPromise;
 }
 
 export interface v1_pc_dashboard_proposal {

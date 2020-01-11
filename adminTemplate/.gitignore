@@ -1,13 +1,12 @@
 .DS_Store
 node_modules
 /dist
-/src/api/*.js
 /src/api/**/*.js
 /src/utils/**/*.js
 /src/filters/**/*.js
 /src/assets/js/common.js
-/src/alert-vue-plug/*.js
 /src/alert-vue-plug/**/*.js
+/src/data/**/*.js
 
 # local env files
 .env.local

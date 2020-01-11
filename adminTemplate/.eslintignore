@@ -3,3 +3,4 @@
 /src/assets/js/*.ts
 /src/utils/*.ts
 /src/alert-vue-plug/*.ts
+/src/data/*.ts

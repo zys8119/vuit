@@ -25,23 +25,35 @@ export default {
     components: {TabsNav, TopNav, LeftNav},
     data() {
         return {
-            menu: []
+            menu: [],
         }
     },
     beforeCreate() {
         if (!sessionStorage.getItem('userInfo')) this.$router.push('/login')
     },
     mounted() {
-        window._this = this
+        window._this = this;
         this.menu = this.$router.options.routes
-        if (process.env.NODE_ENV === 'development') {
-            this.$store.commit('SaveMenu', this.menu)
-            this.$store.dispatch('RouterChange')
+        if (!this.$store.state.menu.getServeMenuList && process.env.NODE_ENV === 'development') {
+            this.setStore({
+                menus:this.menu
+            })
         } else this.getMenuList()
     },
     methods: {
+        // 写入数据
+        setStore({menus}){
+            // 渲染菜单权限
+            this.$store.commit('SaveMenu',menus)
+            // 渲染当前路菜单状态
+            this.$store.dispatch('RouterChange')
+        },
         // 获取线上菜单
-        getMenuList() {}
+        getMenuList() {
+            this.api.v1.auth.selfMenuAndRole().then(res=>{
+                this.setStore(res.data);
+            })
+        }
     }
 }
 </script>

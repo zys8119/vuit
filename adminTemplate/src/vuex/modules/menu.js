@@ -1,3 +1,5 @@
+import configs from "../../data/config"
+import $utils from "../../utils/index"
 const menu = {
     state: {
         currentPathInfo: '',
@@ -6,14 +8,22 @@ const menu = {
         cashLeftMenu: {},
         leftActiveMenuKeys: [],
         navMenuList:[],
+        getServeMenuList:configs.MenuMap.switch,
+    },
+    getters:{
+        MenuMap:state =>{
+            if(!state.getServeMenuList && process.env.NODE_ENV === 'development'){return configs.MenuMap.dev}
+            return configs.MenuMap.buid;
+        }
     },
     actions: {
         // 路由变化
-        RouterChange: (context) => {
+        RouterChange(context){
             let currentPathArr = context.state.currentPathInfo.path.split('/')
             let hashUrlOne = '/' + currentPathArr[1]
             context.state.leftActiveMenuKeys = []
-            context.state.menuList.map(v => {
+            context.state.menuList.map(vItem => {
+                let v = $utils.getMenuMap(vItem,this.getters.MenuMap);
                 if (v.path === hashUrlOne) {
                     if (v.children) context.state.leftMenuList = v.children
                 }
@@ -33,20 +43,26 @@ const menu = {
             state.menuList = menu
         },
         // 页面当前hash路由地址
-        SetCurrentPathInfo: (state, info) => {
+        SetCurrentPathInfo(state, info){
             state.currentPathInfo = info
         },
         // 获取左侧菜单 激活key
-        GetLeftMenuKey: (state, obj) => {
+        GetLeftMenuKey(state, obj){
             if (obj.key !== 0) {
-                state.cashLeftMenu.children.map((v, i) => {
-                    if (v.path === obj.value) {
-                        state.leftActiveMenuKeys.push(i)
-                        state.cashLeftMenu = v
-                    }
-                })
+                try {
+                    state.cashLeftMenu.children.map((vItem, i) => {
+                        let v = $utils.getMenuMap(vItem,this.getters.MenuMap);
+                        if (v.path === obj.value) {
+                            state.leftActiveMenuKeys.push(i)
+                            state.cashLeftMenu = v
+                        }
+                    })
+                }catch (e) {
+                    //err
+                }
             } else {
-                state.leftMenuList.map((v, i) =>{
+                state.leftMenuList.map((vItem, i) =>{
+                    let v = $utils.getMenuMap(vItem,this.getters.MenuMap);
                     if (v.path === obj.value) {
                         state.leftActiveMenuKeys.push(i)
                         state.cashLeftMenu = v
@@ -57,7 +73,7 @@ const menu = {
         SetLeftMenu:(state, menu) => {
             state.leftMenuList = menu
         },
-        SetNavMenu:(state) => {
+        SetNavMenu(state) {
             let isNoRepeat = false
             if (state.currentPathInfo.meta.isAllPage) return
             state.navMenuList.map(v => {

@@ -66,7 +66,8 @@ export default {
     },
     methods: {
         // 点击头部导航
-        goLink(row) {
+        goLink(rowItem) {
+            let row = this.$utils.getMenuMap(rowItem,this.$store.getters.MenuMap);
             let self = this
             let path = '/' + this.$store.state.menu.currentPathInfo.path.split('/')[1]
             if (path !== row.path) {

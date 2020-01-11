@@ -55,5 +55,13 @@ export default <$utilsOption>{
             else step = moveBackStep * 100
             if (element.scrollLeft) element.scrollLeft += step;
         }
+    },
+    getMenuMap(item,mapData){
+        return {
+            ...item,
+            path:item[mapData.path],
+            children:item[mapData.children],
+            name:item[mapData.name],
+        }
     }
 }
