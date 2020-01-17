@@ -8,7 +8,7 @@ export default {
         {
             path: 'register-manage',
             name: '报道管理',
-            component: () => import('../../components/views/PeoplesCongressMeeting/RegisterManage.vue')
+            component: () => import('../../components/views/PeoplesCongressMeeting/RegisterManage.vue'),
         }
     ]
 }

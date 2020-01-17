@@ -192,6 +192,7 @@ export default {
         }
     },
     mounted() {
+        sessionStorage.clear();
         let self = this
         document.onkeydown = function(event) {
             var e = event || window.event

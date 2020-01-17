@@ -7,6 +7,8 @@ node_modules
 /src/assets/js/common.js
 /src/alert-vue-plug/**/*.js
 /src/data/**/*.js
+/src/components/Mixins//ContentTable.js
+/src/vuex/modules/layout.js
 
 # local env files
 .env.local

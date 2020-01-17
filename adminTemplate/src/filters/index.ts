@@ -1,4 +1,6 @@
 /**
  * 全局过滤器
  */
-export default {}
+export default {
+
+}

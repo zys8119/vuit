@@ -50,7 +50,6 @@ const plugin:PluginObject<Vue> = {
                 }
                 $vm.show = true;
                 $vm.showBox = true;
-                console.log(vue.prototype.$ZAlert)
                 return vue.prototype.$ZAlert.index-1;
             },
             hide(){

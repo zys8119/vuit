@@ -13,7 +13,7 @@
             </div>
         </div>
         <div class="nav-arrow">
-            <el-dropdown>
+            <el-dropdown trigger="click">
                 <span class="el-icon-s-operation"></span>
                 <el-dropdown-menu slot="dropdown">
                     <el-dropdown-item @click.stop.native="refreshCurrent" class="t-a-c">刷新当前</el-dropdown-item>
@@ -53,14 +53,33 @@ export default {
         clickTab(row){
             this.$router.push(row.path)
         },
+        getRef(vm,$refsKeyName,$parent){
+            let resultVm = vm.$refs[$refsKeyName];
+            if($parent && resultVm && vm.$refs[$refsKeyName].$parent){
+                resultVm = vm.$refs[$refsKeyName].$parent;
+            }
+            if(vm.$children && vm.$children.length){
+                for (let i = 0, lng = vm.$children.length; i < lng; i++){
+                    let resultVmC = this.getRef(vm.$children[i],$refsKeyName,$parent);
+                    if(resultVmC){
+                        resultVm = resultVmC;
+                        break;
+                    }
+                }
+            }
+            return resultVm;
+        },
         // 刷新当前
         refreshCurrent() {
             let currentComponent = this.$route.matched[this.$route.matched.length - 1].instances.default
             if (currentComponent && typeof currentComponent.init === "function") currentComponent.init()
+            // 刷新表格
+            let contentTable_el_table = this.getRef(currentComponent,"contentTable_el_table",true);
+            if (contentTable_el_table && typeof contentTable_el_table.init === "function") contentTable_el_table.init()
         },
         // 关闭所有
         closeAllTabs() {
-
+            this.$store.commit('DeleteOthersNavMenu', this.$route.path)
         }
     }
 }

@@ -274,10 +274,14 @@ html, body {
             width: 100%;
             height: calc(~"100% - 40px");
             overflow: auto;
-            background: #F2F2F2;
+            background: @themeBackgroundColor;
             position: absolute;
             left: 0;
             top: 40px;
+            &.CC_Breadcrumb{
+                height: calc(~"100% - 40px - 40px");
+                top: 80px;
+            }
         }
     }
     .main-content.all-main-content {
@@ -288,4 +292,22 @@ html, body {
 // 横向居中
 .t-a-c {
     text-align: center;
+}
+
+// 表格快捷编辑
+.contentTable-el-popover{
+    .ZButton{
+        width: 100%;
+        margin-top: @unit15;
+    }
+    .el-icon-close{
+        position: absolute;
+        right: @unit15;
+        top: @unit15;
+        cursor: pointer;
+        &:hover{
+            background-color: #5C626B;
+            color: #ffffff;
+        }
+    }
 }

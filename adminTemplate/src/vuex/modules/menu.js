@@ -80,6 +80,13 @@ const menu = {
                 if (v.path === state.currentPathInfo.path) isNoRepeat = true
             })
             if (!isNoRepeat) state.navMenuList.push(state.currentPathInfo)
+        },
+        DeleteOthersNavMenu(state, currentPath) {
+            let obj =  state.navMenuList.find(v => {
+                return v.fullPath === currentPath
+            })
+            state.navMenuList.splice(0, state.navMenuList.length)
+            state.navMenuList.push(obj)
         }
     }
 }

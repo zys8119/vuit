@@ -63,5 +63,24 @@ export default <$utilsOption>{
             children:item[mapData.children],
             name:item[mapData.name],
         }
+    },
+    setTheme(color:string, cssContentText:string){
+        let lessThemeEl = document.getElementById("lessTheme");
+        let css = lessThemeEl || document.createElement("style");
+        css.id = "lessTheme";
+        css.innerText = cssContentText;
+        if(!lessThemeEl){
+            document.head.appendChild(css);
+        }
+        //主题持久化
+        localStorage.themeColor = color;
+    },
+    is_S(val,lng,isSatrt){
+        let is_SS = !(val && /^\S{1,}/.test(val));
+        if(typeof lng === "boolean" || isSatrt === true){
+            is_SS = !(val && /\S{1,}/.test(val));
+        }
+        let result = is_SS || ((val && val.length && typeof val.length == "number" && typeof lng == "number")?(val && val.length && val.length < lng):false);
+        return result
     }
 }

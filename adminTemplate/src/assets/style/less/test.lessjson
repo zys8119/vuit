@@ -1,0 +1,12 @@
+{
+  "@main-color": "#af0a0b",
+  "@border-color": "#cccccc",
+  "@gray-color": "#cccccc",
+  "@dome": "#cccccc",
+
+  "@themeBackgroundColor": "#F2F2F2",
+
+  "@font-size": "14px",
+  "@title-font-size": "16px",
+  "@nav-font-size": "18px"
+}

@@ -7,9 +7,9 @@
             <div class="right">
                 <slot name="header-right"></slot>
                 <el-tooltip v-if="tooltip && icon" effect="dark" :content="tooltip" placement="bottom">
-                    <span :class="`iconfont ${icon}`" @click="$emit('export')"></span>
+                    <span class="iconfont" @click="$emit('export')" v-html="icon"></span>
                 </el-tooltip>
-                <span v-if="!tooltip && icon" :class="`iconfont ${icon}`" @click="$emit('export')"></span>
+                <span v-if="!tooltip && icon" class="iconfont" @click="$emit('export')"  v-html="icon"></span>
             </div>
         </div>
         <div class="HomeCardContent" :style="{height:height}">
@@ -35,7 +35,7 @@ export default {
         // 图标
         icon:{
             type:[String,Boolean],
-            default:"icondaochu"
+            default:"&#xe60d;"
         },
         // 高度
         height:{
