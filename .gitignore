@@ -3,4 +3,3 @@ node_modules/
 package-lock.json
 /index.js
 /typeSctipt/*.js
-/bin/**/*.js
