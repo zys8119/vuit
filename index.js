@@ -3,9 +3,6 @@ var command = require("ncommand");
 var Vuit = require("./bin/vuit");
 var newCommand = new command();
 var VuitInit = new Vuit();
-// const CommandsConfigs = {
-// "-i":{log:["-i","...info('[-i]')","拉取基础模板"],output:false,type:null},
-// };
 newCommand.end(function () {
     this.console
         .color(function () {
@@ -58,7 +55,7 @@ newCommand.end(function () {
     .Commands({
     log: ["-v3", "...info('[-v3]')", "拉取vue3.0 模板：【vue3.0、typescript、less、element-plus、vue-router、vuex】"],
     callback: function () {
-        VuitInit.init(this, "adminTemplate");
+        VuitInit.init(this, "v3Template");
     }
 })
     .Options({
