@@ -1,9 +1,9 @@
 <template>
     <div>
         <keep-alive>
-            <router-view class="Index" v-if="$store.state.layout.keepAlive"/>
+            <router-view v-if="$route.meta.keepAlive" class="Index"/>
         </keep-alive>
-        <router-view v-if="!$store.state.layout.keepAlive" class="Index"/>
+        <router-view v-if="!$route.meta.keepAlive" class="Index"/>
     </div>
 </template>
 

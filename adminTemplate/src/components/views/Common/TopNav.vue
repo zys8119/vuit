@@ -22,7 +22,6 @@
                         <span class="el-icon-arrow-down"></span>
                         <el-dropdown-menu slot="dropdown">
                             <el-dropdown-item class="t-a-c">修改密码</el-dropdown-item>
-                            <el-dropdown-item class="t-a-c" @click.native="switchThemeColor">切换主题色</el-dropdown-item>
                         </el-dropdown-menu>
                     </el-dropdown>
                 </div>
@@ -89,14 +88,6 @@ export default {
                 localStorage.removeItem('token')
                 this.$router.push('/login')
             })
-        },
-        // 切换主题
-        switchThemeColor(){
-            this.$ZAlert.show({
-                title:"切换主题色",
-                width:"400px",
-                components:"components/views/Common/SwitchThemeColor"
-            });
         }
     }
 }

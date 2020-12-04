@@ -1,7 +1,7 @@
 <!--报道管理-->
 <template>
     <div id="RegisterManage">
-        手动阀手动阀
+        asdasd手动阀手动阀
     </div>
 </template>
 

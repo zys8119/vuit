@@ -1,0 +1,21 @@
+{
+  "name": "v3",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build"
+  },
+  "dependencies": {
+    "element-plus": "^1.0.1-beta.3",
+    "loadsh": "0.0.4",
+    "lodash": "^4.17.20",
+    "vue": "^3.0.2",
+    "vue-router": "^4.0.0-rc.6",
+    "vuex": "^4.0.0-rc.2"
+  },
+  "devDependencies": {
+    "@vue/compiler-sfc": "^3.0.2",
+    "vite": "^1.0.0-rc.8",
+    "less": "^3.12.2"
+  }
+}

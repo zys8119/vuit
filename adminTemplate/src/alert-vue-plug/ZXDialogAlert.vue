@@ -1,5 +1,6 @@
 <template>
     <div class="ZXDialogAlert" v-if="showBox">
+        {{showBox}}
         <el-dialog :title="title"
                    :visible.sync="show"
                    :width="width"
@@ -21,13 +22,11 @@
                    @closed="onClosed"
                    @close="onHide"
                    class="x-dialog">
-            <div class="ZXDialogAlert-el-dialog" :style="{maxHeight:maxHeight+'px'}">
-                <component ref="component" v-if="show && components" :is="temp"></component>
-                <div v-if="show && !components && content" v-html="content"
-                     class="ZXDialogAlertContent console-PagePadding"></div>
-                <render-html slot="title" v-if="slotTitle" :renderHtml="slotTitle"></render-html>
-                <render-html slot="footer" v-if="slotFooter" :renderHtml="slotFooter"></render-html>
-            </div>
+            <component ref="component" v-if="show && components" :is="temp"></component>
+            <div v-if="show && !components && content" v-html="content"
+                 class="ZXDialogAlertContent console-PagePadding"></div>
+            <render-html slot="title" v-if="slotTitle" :renderHtml="slotTitle"></render-html>
+            <render-html slot="footer" v-if="slotFooter" :renderHtml="slotFooter"></render-html>
         </el-dialog>
     </div>
 </template>
@@ -66,15 +65,6 @@ export default {
         return {
             show: false,
             showBox: false,
-            maxHeight:700,
-        }
-    },
-    mounted() {
-        this.maxHeight = (window.innerHeight - 54)*0.6;
-        let WinOnResize = window.onresize;
-        window.onresize = ()=>{
-            this.maxHeight = (window.innerHeight - 54)*0.6;
-            if(WinOnResize) WinOnResize();
         }
     },
     methods: {
@@ -157,13 +147,6 @@ export default {
             .weui-dialog {
                 width: auto;
                 z-index: 500 !important;
-            }
-            .el-dialog{
-                overflow: hidden;
-            }
-            .ZXDialogAlert-el-dialog{
-                max-height: 700px;
-                overflow-x: hidden;
             }
         }
 

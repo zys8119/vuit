@@ -1,5 +1,4 @@
 import {appConfigOptions} from "../api/Interface";
-import Layout from "./Layout";
 
 export default <appConfigOptions>{
     MenuMap:{
@@ -14,6 +13,5 @@ export default <appConfigOptions>{
             children:"children",
             name:"name",
         }
-    },
-    Layout:Layout,
+    }
 }

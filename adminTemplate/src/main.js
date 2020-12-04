@@ -20,15 +20,7 @@ import store from './vuex/store'
 router.beforeEach((to, from ,next) => {
     //设置baseURL
     window.baseURL = to.meta.baseURL;
-    store.commit('SetCurrentPathInfo', to);
-    // 设置布局配置
-    store.commit('setLayout', to.meta);
-    // 重置视图滚动位置
-    let mainViewContent = document.getElementById("mainViewContent");
-    if(mainViewContent){
-        mainViewContent.scrollLeft = 0;
-        mainViewContent.scrollTop = 0;
-    }
+    store.commit('SetCurrentPathInfo', to)
     // 是否左侧菜单 实现手风琴效果 一次只能展开一组
     if (store.state.menu.menuList.length > 0 && !to.meta.isAllPage) store.dispatch('RouterChange')
     next()

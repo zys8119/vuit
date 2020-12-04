@@ -9,7 +9,7 @@
             height:nodeHeight+'px',
             lineHeight:nodeHeight+'px',
             }" :class="{
-                node_parent:!!item[childrenField] && item[childrenField].length > 0,
+                node_parent:!!item[childrenField],
                 node_child:!item[childrenField],
                 node_top:(isTop && key === 0),
                 checked:checkedMap === ((keyMap)?`${keyMap},${key}`:`${key}`),
@@ -17,7 +17,7 @@
                 data:item,
                 key:key,
                 keyMap:(keyMap)?`${keyMap},${key}`:`${key}`,
-                node_parent:!!item[childrenField] && item[childrenField].length > 0,
+                node_parent:!!item[childrenField],
                 node_child:!item[childrenField],
                 node_top:(isTop && key === 0),
                 node_open:!item.node_open,
@@ -28,7 +28,7 @@
                 data:item,
                 key:key,
                 keyMap:(keyMap)?`${keyMap},${key}`:`${key}`,
-                node_parent:!!item[childrenField] && item[childrenField].length > 0,
+                node_parent:!!item[childrenField],
                 node_child:!item[childrenField],
                 node_top:(isTop && key === 0),
                 node_open:!item.node_open,
@@ -41,7 +41,6 @@
                     :isTop="false"
                     :indentIndex="indentIndex+1"
                     :showNameField="showNameField"
-                    :childrenField="childrenField"
                     :keyMap="(keyMap)?`${keyMap},${key}`:`${key}`"
                     :parentNode="item"
                     :atf="atf"
@@ -54,7 +53,7 @@
                     :level= "level + 1"
             >
                 <template slot-scope="{node, data}">
-                    <slot :node="node" :data="data">{{data[showNameField]}}</slot>
+                    <slot :node="node" :data="data">{{node[showNameField]}}</slot>
                 </template>
             </z-tree>
         </div>
@@ -120,7 +119,7 @@ export default {
             type: Number,
             default: 300
         },
-        // 选中key
+        // 动画时间
         checked: {
             type: String,
             default: null
