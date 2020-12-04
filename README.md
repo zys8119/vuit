@@ -14,11 +14,12 @@ vue+vux+zys8119 基础模板
 
 ```bash
     where <command|options> is one of:
-         init -i app -a  -v --version -h help
+         init -i app -a admin -admin -v3 -v --version -h help
     Commands
         init [-i] 拉取基础模板
         app [-a] 拉取app架构模板
         admin [-admin] 拉取admin架构模板
+        -v3 [-v3] 拉取vue3.0 模板：【vue3.0、typescript、less、element-plus、vue-router、vuex】
     Options
         -v 查看版本号
         --version 查看版本号
