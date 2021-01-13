@@ -51,7 +51,7 @@
         <!-- 底部 -->
         <footer class="footer-content">
             <div class="left">
-                <p>宁波市人大常委会办公厅主办</p>
+                <p>-----------</p>
                 <p>浙ICP备15005116号-1</p>
             </div>
             <div class="right">
