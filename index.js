@@ -11,7 +11,8 @@ newCommand.end(function () {
             .info(" <command|options> ")
             .log("is one of:");
     })
-        .log("    init -i app -a admin -admin -v3 -v --version -h help");
+        // .log(`    init -i app -a admin -admin -v3 -v --version -h help`)
+        .log("    init -i app -a -v3 -v --version -h help");
 })
     .Commands({
     log: ["-i", "...info('[-i]')", "拉取基础模板"],
@@ -39,19 +40,19 @@ newCommand.end(function () {
         VuitInit.init(this, "appTemplate");
     }
 })
-    .Commands({
-    log: ["admin", "...info('[-admin]')", "拉取admin架构模板"],
-    callback: function () {
-        VuitInit.init(this, "adminTemplate");
-    }
-})
-    .Commands({
-    log: ["-admin", "...info('[-admin]')", "拉取admin架构模板"],
-    output: false,
-    callback: function () {
-        VuitInit.init(this, "adminTemplate");
-    }
-})
+    // .Commands({
+    //     log:["admin","...info('[-admin]')","拉取admin架构模板"],
+    //     callback:function () {
+    //         VuitInit.init(this,"adminTemplate");
+    //     }
+    // })
+    // .Commands({
+    //     log:["-admin","...info('[-admin]')","拉取admin架构模板"],
+    //     output:false,
+    //     callback:function () {
+    //         VuitInit.init(this,"adminTemplate");
+    //     }
+    // })
     .Commands({
     log: ["-v3", "...info('[-v3]')", "拉取vue3.0 模板：【vue3.0、typescript、less、element-plus、vue-router、vuex】"],
     callback: function () {
